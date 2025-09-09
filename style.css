@@ -1,0 +1,117 @@
+/* Custom CSS for SQL Query Pro */
+
+/* Google Fonts - Inter for body, Fira Code for code/mono */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6; /* Fallback */
+    color: #1f2937;
+    overflow-x: hidden; /* Prevent horizontal scroll from AOS animations */
+}
+
+/* Background Overlay with Animation (Unsplash image credit: https://unsplash.com/photos/blue-and-purple-smoke-illustration-D4jR-N93z7I) */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f0ab87e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(0.7); /* Blur and darken for a subtle effect */
+    animation: panBackground 60s infinite alternate linear; /* Slow, continuous movement */
+    z-index: 0; /* Ensure it's behind content */
+}
+
+@keyframes panBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Ensure content is above the overlay */
+.relative {
+    position: relative;
+    z-index: 10;
+}
+
+/* Custom styles for tables */
+#results-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+#results-table-container th,
+#results-table-container td {
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0; /* light gray */
+    text-align: left;
+}
+
+#results-table-container th {
+    background-color: #edf2f7; /* lighter gray */
+    font-weight: 600;
+    color: #4a5568; /* dark gray */
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+#results-table-container tr:nth-child(even) {
+    background-color: #f7fafc; /* very light gray for zebra striping */
+}
+
+#results-table-container tr:hover {
+    background-color: #e2e8f0; /* highlight on hover */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Style for code snippets within tips */
+code {
+    font-family: 'Fira Code', monospace;
+}
+
+/* Specific styling for the textarea to ensure monospaced font */
+#sqlQuery {
+    font-family: 'Fira Code', monospace;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+    .container {
+        padding: 1.5rem;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    .lg\:col-span-2, .lg\:col-span-1 {
+        grid-column: span 1 / span 1; /* Reset grid to single column on small screens */
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 0.9rem;
+    }
+    .p-6 {
+        padding: 1rem;
+    }
+    .space-y-8 > div {
+        margin-top: 1.5rem !important; /* Adjust spacing for mobile */
+    }
+    .flex.justify-center.space-x-6 a {
+        font-size: 1.5rem; /* Smaller icons on small screens */
+    }
+}
