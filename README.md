@@ -8,7 +8,7 @@
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![Technologies](https://img.shields.io/badge/Tech-HTML%2FCSS%2FJS-blue)](https://github.com/janiyax35/SQL-Query-Pro-Playground#technologies-used-%EF%B8%8F)
-  [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)]([LIVE_DEMO_URL_HERE]) 
+  [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](http://janith.qzz.io/SQL-Query-Pro-Playground/) 
   [![GitHub Followers](https://img.shields.io/github/followers/janiyax35?style=social)](https://github.com/janiyax35)
 </div>
 
